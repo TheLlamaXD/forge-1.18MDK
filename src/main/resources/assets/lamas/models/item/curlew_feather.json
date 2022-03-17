@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "lamas:item/curlew_feather"
+  }
+
+}

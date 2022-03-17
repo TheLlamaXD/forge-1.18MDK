@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    " # ",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "X": {
+      "item": "lamas:wenge_wood_planks"
+    }
+  },
+  "result": {
+    "item": "minecraft:wooden_pickaxe"
+  }
+}

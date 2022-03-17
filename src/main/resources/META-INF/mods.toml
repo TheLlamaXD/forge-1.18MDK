@@ -1,0 +1,88 @@
+# This is an example mods.toml file. It contains the data relating to the loading mods.
+# There are several mandatory fields (#mandatory), and many more that are optional (#optional).
+# The overall format is standard TOML format, v0.5.0.
+# Note that there are a couple of TOML lists in this file.
+# Find more information on toml format here:  https://github.com/toml-lang/toml
+# The name of the mod loader type to load - for regular FML @Mod mods it should be javafml
+modLoader="javafml" #mandatory
+# A version range to match for said mod loader - for regular FML @Mod it will be the forge version
+loaderVersion="[39,)" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
+# The license for you mod. This is mandatory metadata and allows for easier comprehension of your redistributive properties.
+# Review your options at https://choosealicense.com/. All rights reserved is the default copyright stance, and is thus the default here.
+license="Amogus"
+# A URL to refer people to when problems occur with this mod
+#issueTrackerURL="https://change.me.to.your.issue.tracker.example.invalid/" #optional
+# A list of mods - how many allowed here is determined by the individual mod loader
+[[mods]] #mandatory
+# The modid of the mod
+modId="lamas" #mandatory
+# The version number of the mod - there's a few well known ${} variables useable here or just hardcode it
+# ${file.jarVersion} will substitute the value of the Implementation-Version as read from the mod's JAR file metadata
+# see the associated build.gradle script for how to populate this completely automatically during a build
+version="${file.jarVersion}" #mandatory
+ # A display name for the mod
+displayName="Llamas Adventures" #mandatory
+# A URL to query for updates for this mod. See the JSON update specification https://mcforge.readthedocs.io/en/latest/gettingstarted/autoupdate/
+#updateJSONURL="https://change.me.example.invalid/updates.json" #optional
+# A URL for the "homepage" for this mod, displayed in the mod UI
+#displayURL="https://change.me.to.your.mods.homepage.example.invalid/" #optional
+# A file name (in the root of the mod JAR) containing a logo for display
+logoFile="Titelbild2.png" #optional
+# A text field displayed in the mod UI
+credits="Thanks for this example mod goes to Java" #optional
+# A text field displayed in the mod UI
+authors="Sussy Boy TheLlamaXD" #optional
+# The description text for the mod (multi line!) (#mandatory)
+description='''
+At the first God made the heaven and the earth.
+And the earth was waste and without form; and it was dark on the face of the deep: and the Spirit of God was moving on the face of the waters.
+And God said, Let there be light: and there was light.
+And God, looking on the light, saw that it was good: and God made a division between the light and the dark,
+Naming the light, Day, and the dark, Night. And there was evening and there was morning, the first day.
+And God said, Let there be a solid arch stretching over the waters, parting the waters from the waters.
+And God made the arch for a division between the waters which were under the arch and those which were over it: and it was so.
+And God gave the arch the name of Heaven. And there was evening and there was morning, the second day.
+And God said, Let the waters under the heaven come together in one place, and let the dry land be seen: and it was so.
+And God gave the dry land the name of Earth; and the waters together in their place were named Seas: and God saw that it was good.
+And God said, Let grass come up on the earth, and plants producing seed, and fruit-trees giving fruit, in which is their seed, after their sort: and it was so.
+And grass came up on the earth, and every plant producing seed of its sort, and every tree producing fruit, in which is its seed, of its sort: and God saw that it was good.
+And there was evening and there was morning, the third day.
+And God said, Let there be lights in the arch of heaven, for a division between the day and the night, and let them be for signs, and for marking the changes of the year, and for days and for years:
+And let them be for lights in the arch of heaven to give light on the earth: and it was so.
+And God made the two great lights: the greater light to be the ruler of the day, and the smaller light to be the ruler of the night: and he made the stars.
+And God put them in the arch of heaven, to give light on the earth;
+To have rule over the day and the night, and for a division between the light and the dark: and God saw that it was good.
+And there was evening and there was morning, the fourth day.
+And God said, Let the waters be full of living things, and let birds be in flight over the earth under the arch of heaven.
+And God made great sea-beasts, and every sort of living and moving thing with which the waters were full, and every sort of winged bird: and God saw that it was good.
+And God gave them his blessing, saying, Be fertile and have increase, making all the waters of the seas full, and let the birds be increased in the earth.
+And there was evening and there was morning, the fifth day.
+And God said, Let the earth give birth to all sorts of living things, cattle and all things moving on the earth, and beasts of the earth after their sort: and it was so.
+And God made the beast of the earth after its sort, and the cattle after their sort, and everything moving on the face of the earth after its sort: and God saw that it was good.
+And God said, Let us make man in our image, like us: and let him have rule over the fish of the sea and over the birds of the air and over the cattle and over all the earth and over every living thing which goes flat on the earth.
+And God made man in his image, in the image of God he made him: male and female he made them.
+And God gave them his blessing and said to them, Be fertile and have increase, and make the earth full and be masters of it; be rulers over the fish of the sea and over the birds of the air and over every living thing moving on the earth.
+And God said, See, I have given you every plant producing seed, on the face of all the earth, and every tree which has fruit producing seed: they will be for your food:
+And to every beast of the earth and to every bird of the air and every living thing moving on the face of the earth I have given every green plant for food: and it was so.
+And God saw everything which he had made and it was very good. And there was evening and there was morning, the sixth day.
+'''
+# A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
+[[dependencies.examplemod]] #optional
+    # the modid of the dependency
+    modId="forge" #mandatory
+    # Does this dependency have to exist - if not, ordering below must be specified
+    mandatory=true #mandatory
+    # The version range of the dependency
+    versionRange="[39,)" #mandatory
+    # An ordering relationship for the dependency - BEFORE or AFTER required if the relationship is not mandatory
+    ordering="NONE"
+    # Side this dependency is applied on - BOTH, CLIENT or SERVER
+    side="BOTH"
+# Here's another dependency
+[[dependencies.examplemod]]
+    modId="minecraft"
+    mandatory=true
+# This version range declares a minimum of the current minecraft version up to but not including the next major version
+    versionRange="[1.18.1,1.19)"
+    ordering="NONE"
+    side="BOTH"
